@@ -15,53 +15,103 @@
     <body>
         <h1>My Form</h1>
         <form action="file.php" method="get">
+     <p>Note: all Elements contains * are mandatory </p>
             <div>
-                <label for="fnam">First Name:</label>
-                <input type="text" id="fnam" placeholder="enter name" value="prasad" name="fname" />
+                <label for="fnam">First Name*:</label>
+                <input type="text" id="fnam" placeholder="enter name" name="fname" required minlength="8"/>
             </div>
             <br>
             <div>
                 <label for="lnam">Last name:</label>
-                <input type="text" id="lnam" placeholder="enter your last name" name="lname"/>
+                <input type="text" id="lnam"  value="patel" placeholder="enter your last name" name="lname" disabled />
             </div>
             <br>
             <div>
-                <label for="em">Email</label> 
-                <input type="email" id="em" placeholder="Enter your email" name="email"/>
+                <label for="em">Email</label>
+                <input type="text" id="em" placeholder="Enter your email" value="raj" name="email" readonly  />
+                <input type="hidden" name="jobrole" value="developer">
             </div>
-             <br>
-             <div>
-               <label for="pw">Password</label>
-               <input type="password" id="pw" placeholder="Enter your Password" name="pswd"/>
-             </div>
-             <br>
+            <br>
+            <div>
+                <label for="pw">Password</label>
+                <input type="password" id="pw" placeholder="Enter your Password" name="pswd" />
+            </div>
+            <br>
             <div>
                 <label for="age">Age</label>
-                <input type="number" id="age" placeholder="Enter your Age" name="age" />
+                <input type="number" id="age" placeholder="Enter your Age" name="age" min="20" max="80" />
             </div>
-           <br>
-        <div>
-            <label for="dob">Date of Birth</label>
-            <input type="time" id="dob" name="dob" />
-        </div>
-        <br>
-        <div>
-            <label for="dob">Date of Birth</label>
-            <input type="file" id="dob" name="dob" />
-        </div>
-        <br>
-        <div>
-            <label for="clr">Date of Birth</label>
-            <input type="color" id="clr" name="color" />
-        </div>
-        <br>
-           <!-- <input type="image" src="./image.jpg" alt="img"> -->
-           <input type="range" name="" id="">
+            <br>
+            <div>
+                <label for="dob">Date of Birth</label>
+                <input type="time" id="dob" name="dob" />
+            </div>
+            <br>
+            <div>
+                <label for="dob">Date of Birth</label>
+                <input type="file" id="dob" name="dob" />
+            </div>
+            <br>
+            <div>
+                <label for="clr">Date of Birth</label>
+                <input type="color" id="clr" name="color" />
+            </div>
+            <br>
+            <!-- <input type="image" src="./image.jpg" alt="img"> -->
+            <!-- <input type="range" name="" id="">
            <input type="url" name="" id="">
-           <input type="week" name="" id="">
+           <input type="week" name="" id=""> -->
+            <!-- radio button -->
+            <p>Choose your gender:</p>
+            <input type="radio" name="gender" value="sharukh" id="rd"><label for="rd">Male</label>
+            <input type="radio" name="gender" value="alia" id="rd1"><label for="rd1">Female</label>
+
+            <!--Checkboxes-->
+            <p>Checkboxes:</p>
+            <input type="checkbox" name="skills" value="html" id="c1"><label for="c1">HTML</label>
+            <input type="checkbox" name="skills" value="css" id="c3"><label for="c3">CSS</label>
+            <input type="checkbox" name="skills1" value="js" id="c2"><label for="c2">JS</label>
+            <!---->
+            <br><br>
+            <label for="">Choose Gender</label>
+            <select name="genderr" id="">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+                <option value="others">Others</option>
+
+            </select>
+            <br><br>
+            <p>Choose Vehicle</p>
+            <select name="vehicle" id="" multiple>
+                <optgroup label="bikes">
+                    <option value="br15">R15</option>
+                    <option value="pulsur">Pulsur</option>
+                    <option value="duke">Duke</option>
+                </optgroup>
+                <optgroup label="cars">
+                    <option value="bmw">BMW</option>
+                    <option value="lamborgini">Lamborgini</option>
+                </optgroup>
+            </select>
+
 
             <input type="submit">
             <input type="reset">
+            <pre>
+
+
+
+
+
+
+
+
+
+
+            </pre>
+
+
+
         </form>
 
 
