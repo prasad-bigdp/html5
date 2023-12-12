@@ -1,0 +1,41 @@
+
+*
+{
+    border: 1px solid black;
+ 
+font-family: 'Nunito', sans-serif;
+}
+h1
+{
+    text-align: center;
+margin: 20px;
+padding: 50px;
+text-decoration: underline;
+text-transform: lowercase;
+text-decoration-color: blue;
+background:radial-gradient(blue,red,yellow,red,green,blue,red,yellow,red,green,blue,red,yellow,red,green);
+opacity: 0.6;
+}
+p
+{
+    text-transform: capitalize;
+}
+div
+{
+
+}
+.menu li
+{
+    display: inline;
+}
+.menu
+{
+        float: right;
+
+}
+a
+{
+    background-color: aqua;
+    text-decoration: none;
+   
+}
