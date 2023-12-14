@@ -1,0 +1,34 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    background-color: linen;
+   color: black;   
+}
+.container
+{
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius:10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+ 
+.child
+{
+   border: 1px solid black;
+    color: white;
+    background-color: brown;
+   
+}
+.child1
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}

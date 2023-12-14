@@ -2,8 +2,9 @@
 *
 {
     border: 1px solid black;
- 
 font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+
 }
 h1
 {
@@ -20,22 +21,53 @@ p
 {
     text-transform: capitalize;
 }
-div
-{
 
-}
 .menu li
 {
     display: inline;
 }
-.menu
-{
-        float: right;
 
-}
 a
 {
     background-color: aqua;
     text-decoration: none;
    
+}
+.firstDiv{
+    background-color: antiquewhite;
+    padding: 20px;
+     position: fixed;
+    left: 0px;
+    top:50px;
+   
+}
+.menu{
+    float: right;
+   
+
+}
+#data
+{
+    clear: both;
+    position: relative;
+}
+
+#container
+{
+    height: 300px;
+    width: 300px;
+    border: 1px solid red;
+}
+.child
+{
+    border: 2px solid black;
+    background-color: crimson;
+    height: 100px;
+    width: 20%;
+    margin: 10px;
+    float: left;
+}
+.seconDiv
+{
+    z-index: 5000;
 }
