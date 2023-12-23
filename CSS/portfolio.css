@@ -40,6 +40,7 @@ header
     position: sticky;
     top: 0px;
     width: 100%;
+    z-index: 1000;
 }
 .menu ul li{
     display: inline-block;
@@ -112,6 +113,12 @@ transition:all 3s ease;
 
 .left p{
     font-size: 20px;
+}
+#home
+{
+    display: flex;
+    height: 100%;
+    align-items: center;
 }
 #home div>img
 {
