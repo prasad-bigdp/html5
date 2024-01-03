@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.movie-card {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+</style>>
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Search</h1>
+        <input type="text" id="searchInput" placeholder="Enter a movie title">
+        <button id="searchButton">Search</button>
+        <div class="movies"></div>
+    </div>
+    <script src="test.js"></script>
+    
+<!-- <script>
+    
+
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+const moviesContainer = document.querySelector('.movies');
+
+searchButton.addEventListener('click', () => {
+    const searchTerm = searchInput.value.trim();
+    if (searchTerm === '') {
+        return;
+    }
+
+    // Clear previous search results
+    moviesContainer.innerHTML = '';
+
+    // Fetch movie data from OMDB API
+    fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=1870b88e`)
+        .then(function(response) {return response.json()})
+            .then((p)=>console.log(p))
+
+        .then((data) => {
+            if (data.Search) {
+                data.Search.forEach((movie) => {
+                    const movieCard = document.createElement('div');
+                    movieCard.classList.add('movie-card');
+                    movieCard.innerHTML = `
+                        <h2>${movie.Title}</h2>
+                        <p>Year: ${movie.Year}</p>
+                        <img src="${movie.Poster}" alt="${movie.Title}">
+                    `;
+                    moviesContainer.appendChild(movieCard);
+                });
+            } else {
+                moviesContainer.innerHTML = '<p>No results found</p>';
+            }
+        })
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+            moviesContainer.innerHTML = '<p>An error occurred</p>';
+        });
+});
+
+</script> -->
+
+</body>
+</html>
+
+

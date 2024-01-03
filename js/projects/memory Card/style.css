@@ -1,0 +1,23 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.memory-game
+{
+    display:grid;
+    grid-template-columns: repeat(4,100px);
+    gap: 10px;
+}
+.mcard{
+width: 100px;
+height: 100px;
+background-color: brown;
+perspective: 1000px;
+}
+.front-face
+{
+transform: rotateY(0deg);
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="myForm">
+        <input type="text" id="txt">
+        <span id="typerror" style="color: red;"></span> <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById('myForm').addEventListener('submit',function(event){
+            const inp= document.getElementById('txt')
+            if(inp.value.trim()===''){
+                document.getElementById('typeerror').textContent='name should not be empty';
+                event.preventDefault();
+            }
+
+        })
+    </script>
+</body>
+</html>

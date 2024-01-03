@@ -1,0 +1,22 @@
+.button
+{
+    display:grid;
+    grid-template-columns: repeat(4,auto); 
+}
+input
+{
+    width:100%;
+    
+}
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+#calculator
+{
+    width:400px;
+    border:1px solid black;
+}
