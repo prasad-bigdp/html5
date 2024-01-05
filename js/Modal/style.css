@@ -1,0 +1,21 @@
+*
+{
+    box-sizing: border-box;
+}
+.modal
+{
+    display: none;
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0px 30px;
+}
+
+.close
+{
+   
+    width: 100%;
+    position: relative;
+left: 120px;
+}
