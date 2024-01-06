@@ -1,0 +1,28 @@
+#book_library
+{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+padding: 50px;
+gap:30px;
+}
+.book
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   border: 1px solid black;
+   border-radius: 10px;
+   box-shadow: 5px 5px black;
+   transition: all 2s ease
+}
+.book img
+{
+    height: 100px;
+    width: 100px;
+}
+.book:hover
+{
+   scale: 1.05;
+}

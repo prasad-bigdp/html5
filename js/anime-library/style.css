@@ -1,0 +1,22 @@
+.anime
+{
+   height: 200px;
+   width: 150px;
+   box-shadow: 5px 3px black;
+   border: 1px solid black;
+   border-radius: 15px;
+   display: grid;
+   place-items: center;
+
+}
+.animes-div
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+.anime a
+{
+    text-decoration: none;
+    font-size: 24px;
+}
