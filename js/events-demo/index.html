@@ -29,6 +29,9 @@
             width: 100px;
             border: 1px solid black;
         }
+        .red{
+            background-color: red;
+        }
     </style>
 </head>
 <body>
@@ -41,6 +44,7 @@
             </div>
         </div>
     </div>
+    
     <div class="buttons">
         <button>btn1</button>
         <button>btn2</button>
@@ -56,15 +60,11 @@
         <button>btn4</button>
     </div>
     <script>
-        const div = document.querySelector('.buttons')
-
-            div.addEventListener("click", function(event)
-            {
-                if (event.target.tagName === 'BUTTON')
-                {
-                    console.log(event.target.innerText)
-                }
-            })
+     const buttons= document.querySelector('.buttons')
+     buttons.addEventListener('click',function(ev){
+        if(ev.target.type==="BUTTON")
+          console.log(ev.target.value)
+     })
     </script>
     <script src="./index.js"></script>
 </body>

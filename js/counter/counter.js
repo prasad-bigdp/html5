@@ -4,6 +4,14 @@ document.getElementById('btn1').addEventListener('click', incr)
 const btn2 = document.getElementById('btn2')
 btn2.addEventListener('click',decr)
 document.getElementById("btn1").addEventListener("click", message)
+setInterval(function ()
+{
+  const dt = new Date()
+
+    document.getElementById("date").textContent = dt.toLocaleTimeString()
+  console.log("helooooooo")
+},1000)
+
 function incr ()
 {
     
