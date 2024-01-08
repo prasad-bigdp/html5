@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        .ggp
+        {
+            height: 400px;
+            width: 400px;
+            border: 1px solid black;
+        }
+        .gp
+        {
+         height: 300px;
+            width: 300px;
+            border: 1px solid black;
+        }
+        .p
+        {
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+        }
+        .c
+        {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="ggp">
+        <div class="gp">
+            <div class="p">
+                <div class="c">
+                    <button id="btn">click</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button>btn1</button>
+        <button>btn2</button>
+        <button>btn3</button>
+        <button>btn4</button>
+        <button>btn1</button>
+        <button>btn2</button>
+        <button>btn3</button>
+        <button>btn4</button>
+        <button>btn1</button>
+        <button>btn2</button>
+        <button>btn3</button>
+        <button>btn4</button>
+    </div>
+    <script>
+        const div = document.querySelector('.buttons')
+
+            div.addEventListener("click", function(event)
+            {
+                if (event.target.tagName === 'BUTTON')
+                {
+                    console.log(event.target.innerText)
+                }
+            })
+    </script>
+    <script src="./index.js"></script>
+</body>
+</html>

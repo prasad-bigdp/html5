@@ -1,5 +1,9 @@
 const para = document.getElementsByTagName('p')
 let count = 0;
+document.getElementById('btn1').addEventListener('click', incr)
+const btn2 = document.getElementById('btn2')
+btn2.addEventListener('click',decr)
+document.getElementById("btn1").addEventListener("click", message)
 function incr ()
 {
     
@@ -8,6 +12,10 @@ function incr ()
 				para[1].textContent = "incremented" 
    
     
+}
+function message ()
+{
+  console.log("helloo")
 }
 function decr ()
 {
@@ -23,6 +31,7 @@ function decr ()
         }
     
 }
+
 function reset ()
 {
     count = 0;
