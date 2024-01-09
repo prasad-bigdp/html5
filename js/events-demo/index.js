@@ -6,23 +6,18 @@ const c = document.querySelector(".c")
 ggp.addEventListener('click', function ()
 {
     alert("greatgrandparent called")
-      ggp.classList.add("red")
 })
 gp.addEventListener("click", function () {
     alert("grandparent called")
-      gp.classList.add("red")
 })
 p.addEventListener("click", function () {
     alert("parent called")
-      p.classList.add("red")
 })
 c.addEventListener("click", function () {
     alert("child  called")
-    c.classList.add('red')
 })
 document.getElementById('btn').addEventListener('click', function (e)
 {
-    console.log(e.target)
     alert("button called")
 })
 /** event propagation is two types
