@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+}
+#results
+{
+border: 1px solid black;
+height: 400px;
+width: 400px;
+display: grid;
+place-items: center;
+}
+#input
+{
+    width: 300px;
+    height: 100px;
+}
+#inp
+{
+    font-size: 36px;
+    width: 150px;
+}
+#btn2
+{
+    background-color: black;
+    color: white;
+}
+#results2
+{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 20px;
+}
+.movie{
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+}
