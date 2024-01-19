@@ -5,29 +5,24 @@ fetchData('https://dummyjson.com/products');
 function fetchData (url)
 {
     fetch(url)
-        .then(function (res)
-        {
-            console.log(res)
-            return res.json()
-        })
-        .then(function (data)
-        {
-            console.log(data)
-            displayData(data.products)
-        })
+        .then((res) => res.json() )
+        .then((data)=>displayData(data.products))
         .catch(function (error)
         {
             console.error(error)
         })
     
 }
-function incr ()
+function priceUpdate (p)
+{
+    console.log(p.price)
+}
+const incr= ()=>
 {
     count++;
-    console.log(count)
     document.querySelector("#cart>span").textContent = count
 }
-function displayData (products)
+const displayData =(products)=>
 {
     products.forEach(function (pro)
     {
@@ -44,7 +39,8 @@ function displayData (products)
         category.textContent = "Category:" + pro.category;
         const btn = document.createElement('button')
         btn.textContent = "Add to Cart"
-        btn.addEventListener('click',incr)
+        // btn.addEventListener('click', incr)
+        btn.onclick=priceUpdate(pro)
         product.append(img, title, category, price, btn);
         mainDiv.appendChild(product)
     });
