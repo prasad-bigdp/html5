@@ -16,25 +16,42 @@
         <h2>Example 1: Creating a Promise</h2>
         <script>
             // Creating a Promise
-            var promise = new Promise(function (resolve, reject) {
+            let anyname = new Promise(function (resolve, reject) {
                 // Simulate an asynchronous task (e.g., data fetching)
                 setTimeout(function () {
-                    var data = "Data fetched successfully!";
+                    let data = "jhsgdsghj kjdsgfshgfhgsj!";
+                    let isLogin=false;
+                    if(isLogin){
+                        resolve(data);
+                    }
+                    else
+                    {
+                        reject("i'm rejected")
+                    }
                     // Resolve the Promise with the data
-                    resolve(data);
+                
                     // Reject the Promise with an error (uncomment to test rejection)
                     // reject("Error: Data retrieval failed!");
-                }, 1500);
+                }, 5000);
             });
-
             // Using the Promise
-            promise
+            anyname
                 .then(function (result) {
                     console.log("Resolved: " + result);
+                    return "user successfully logged in"
+                })
+                .then(function(msg){
+                    console.log(msg)
+                   
+                    return "bye,bye"
                 })
                 .catch(function (error) {
-                    console.error("Rejected: " + error);
-                });
+                    console.info("Rejected: " + error);
+                })
+                .then(function(m){
+                    console.log(m)
+                     
+                })
         </script>
 
         <h2>Example 2: Chaining Promises</h2>

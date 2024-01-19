@@ -1,0 +1,28 @@
+body{
+    box-sizing: border-box;
+}
+h1
+{
+    text-align: center;
+}
+#results
+{
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  margin: 20px;
+  gap: 20px;
+}
+.product
+{
+display:flex;
+padding: 20px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+box-shadow: 10px 8px 5px black;
+}
+.product img
+{
+   height: 150px;
+   width: 150px;
+}
