@@ -2,15 +2,28 @@ const mainDiv = document.getElementById('results');
 
 let count = 0;
 fetchData('https://dummyjson.com/products');
-function fetchData (url)
+async function fetchData (url)
 {
-    fetch(url)
-        .then((res) => res.json() )
-        .then((data)=>displayData(data.products))
-        .catch(function (error)
-        {
-            console.error(error)
-        })
+    // fetch(url)
+    //     .then((res) => res.json() )
+    //     .then((data)=>displayData(data.products))
+    //     .catch(function (error)
+    //     {
+    //         console.error(error)
+    //     })
+    try
+    {
+         const res = await fetch(url);
+    const data = await res.json();
+    displayData(data.products)
+    }
+    catch (err)
+    {
+        console.error(err)
+    }
+   
+
+
     
 }
 function priceUpdate (p)
@@ -21,6 +34,10 @@ const incr= ()=>
 {
     count++;
     document.querySelector("#cart>span").textContent = count
+}
+const maindivAlert = (t) =>
+{
+    console.log(t)
 }
 const displayData =(products)=>
 {
@@ -39,8 +56,7 @@ const displayData =(products)=>
         category.textContent = "Category:" + pro.category;
         const btn = document.createElement('button')
         btn.textContent = "Add to Cart"
-        // btn.addEventListener('click', incr)
-        btn.onclick=priceUpdate(pro)
+        btn.addEventListener('click', maindivAlert(pro.title))
         product.append(img, title, category, price, btn);
         mainDiv.appendChild(product)
     });
