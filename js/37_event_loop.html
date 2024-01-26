@@ -17,10 +17,17 @@
 
         <h2>Example: The Call Stack and the Callback Queue</h2>
         <script>
+             function simulateAsyncOperation2 ()
+                {
+                    setTimeout(function ()
+                    {
+                        console.log("Async operation 2 complete.");
+                    }, 2000);
+                }
             // Function to simulate a time-consuming operation
             function simulateAsyncOperation() {
                 setTimeout(function () {
-                    console.log("Async operation complete.");
+                    console.log("Async operation 1 complete.");
                 }, 1000);
             }
 
@@ -30,6 +37,7 @@
 
                 // Call a function that simulates an asynchronous operation
                 simulateAsyncOperation();
+                simulateAsyncOperation2()
 
                 console.log("End of event loop.");
             }

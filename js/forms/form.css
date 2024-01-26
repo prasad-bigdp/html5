@@ -1,0 +1,15 @@
+input{
+    border: none;
+}
+.Error
+{
+    display: none;
+    color: red;
+    font-size: 12px;
+}
+.input
+{  
+    max-width: fit-content;
+    max-height: fit-content;
+    border-radius: 10px;
+}
