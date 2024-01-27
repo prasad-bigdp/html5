@@ -1,20 +1,17 @@
 
-(async function fetchData ()
+
+function sum(...a)/* rest*/
 {
-    const data = await fetch("https://jsonplaceholder.typicode.com/todos/1")
-    const result = await data.json();
-    console.log(result)
 
-})();
-// event handling -- onclick
-//eventlistener
-// java -- small startup 14000 -
-//6 months- i learned js, html,css+react
-//startup- frontend---1 year
-// i started verizon --4 years-- i learned backend-- full stack MERN
-// Node + Express + mongoDB +postgresql
-// NextJS + graphQL + git +
-
-// search chota/startup companies around u - go there(first learn english)
-// make ur resume, go to these startup and apply
-//incase in interview just say u worked as some proxy
+  return a.reduce(((val,sum)=>val+sum),0)
+}
+let result = sum(5,6,5)
+console.log(result)
+export let arr=[5,6,"prasad",5,6,8,true]
+let obj = {
+    name: "raj",
+    age: 50,
+    email: "a@a.com",
+    status:"Good"
+}
+export default obj;
