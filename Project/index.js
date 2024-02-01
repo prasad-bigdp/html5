@@ -34,8 +34,12 @@ function displayData (data)
         product.classList.add('product')
         const image = document.createElement('img')
         image.src = pro.thumbnail;
+        const productLink = document.createElement('a')
+        productLink.href = `./product.html?pro=${encodeURIComponent(JSON.stringify(pro))} `;
+        productLink.target="_blank"
         const title = document.createElement('h2')
-        title.textContent= pro.title
+        title.textContent = pro.title
+        productLink.appendChild(title)
         const price = document.createElement('price')
         price.textContent = pro.price
         const cart_button = document.createElement('button');
@@ -46,21 +50,27 @@ function displayData (data)
         //pro object is stringified and stored inside data-product
         cart_button.addEventListener('click', addCart) 
         
-        product.append(image, title, price, cart_button)
+        product.append(image, productLink, price, cart_button)
         mainDiv.appendChild(product)
     })
 }
-function addCart ()
+export function addCart ()
 {
     const newpro = JSON.parse(event.target.getAttribute('data-product'))
     console.log(newpro)
-    cart.push(newpro)
+   
+            cart.push(newpro)
+
+   
     cartCount.textContent = cart.length;
-    cartPrice.textContent = cart.reduce((sum,v) =>
-    {
-        console.log(v)
-        console.log(sum)
-      return  v.price + sum
-    }
-        , 0)
+ 
+}
+const cart_button = document.getElementById("cart-button")
+cart_button.addEventListener('click', moveToCheckout)
+export function moveToCheckout ()
+{
+    console.log(cart)
+    localStorage.setItem('cartDetails', JSON.stringify(cart))
+   
+    window.location.href="./checkout.html"
 }

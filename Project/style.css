@@ -27,9 +27,12 @@ header ul
 ul li{
     list-style-type:none;
 }
-#count::before
+#count
 {
-   
+   position: relative;
+   top: -10px;
+   left: -40px;
+   font-weight: 600;
 }
 header #cart-details
 {
