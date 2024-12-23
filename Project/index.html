@@ -20,9 +20,19 @@
         <li>Products</li>
         <li>contact</li>
     </ul>
+    <div id="search">
+        <input type="text" name="" id="searchTerm">
+        <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div id="category">
+        <select name="" id="category-dd">
+            <option value="smartphones">smartphones</option>
+            <option value="laptops">laptops</option>
+        </select>
+    </div>
     <div id="cart-details">
         <p id="cart">
-       <button id="cart-button"><i class="fa-solid fa-cart-shopping" style="color: #e60548;font-size: 42px;"></i>
+       <button id="cart-button"><i class="fa-solid fa-cart-shopping" style="color: white;font-size: 42px;"></i>
             <span id="count" style="color:black;font-size: 36px;"></span>
         </button></p>
         <!-- <p id="cart-price">total: <span id="price"></span></p> -->
@@ -43,5 +53,8 @@
 
    </footer>
    <script type="module" src="./index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
+    integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>

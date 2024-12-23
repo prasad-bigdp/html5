@@ -1,7 +1,23 @@
+function fetchData2()
+{
+   axios.get("https://dummyjson.com/products")
+			.then((res) => console.log(res.data))
+}
+function fetchData3()
+{
+    fetch("https://dummyjson.com/products")
+        .then((res) => res.json())
+    .then((data)=>console.log(data))
+}
+
+fetchData2()
+fetchData3()
+
 async function fetchData ()
 {
     try
     {
+        
         const res = await fetch("https://dummyjson.com/products");
         console.log(res)
         if (res.ok)
@@ -28,6 +44,7 @@ fetchData()
 function displayData (data)
 {
     console.log(data);
+    mainDiv.textContent=""
     data.forEach((pro) =>
     {
         const product = document.createElement('div')
@@ -74,3 +91,29 @@ export function moveToCheckout ()
    
     window.location.href="./checkout.html"
 }
+const searchBtn = document.getElementById('searchBtn')
+const searchTerm = document.getElementById("searchTerm")
+searchBtn.addEventListener('click',  ()=>
+{
+  fetch(`https://dummyjson.com/products/search?q=${searchTerm.value}`)
+      .then((res) => res.json())
+    
+      .then((data) =>
+      {
+          console.log(data)
+          displayData(data.products)
+      })
+})
+const category_dd = document.getElementById('category-dd')
+category_dd.addEventListener('select', function ()
+{
+    console.log(category_dd);
+    fetch(`https://dummyjson.com/products/category/${category_dd}`)
+			.then((res) => res.json())
+
+			.then((data) => {
+				console.log(data)
+				displayData(data.products)
+			})
+
+})

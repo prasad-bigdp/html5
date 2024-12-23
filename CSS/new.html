@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Form</title>
+    <style>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="date"], input[type="number"], select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Mentor Form</h2>
+        
+        <form action="#" method="POST">
+            <!-- Batch Selection -->
+            <div class="form-section">
+                <label for="batch">Select Batch:</label>
+                <select id="batch" name="batch">
+                    <option value="">--Select Batch--</option>
+                    <option value="assigned">Assigned Students</option>
+                    <option value="complete">Complete Batch</option>
+                </select>
+            </div>
+
+            <!-- Date of Announcement -->
+            <div class="form-section">
+                <label for="announcement-date">Date of Announcement:</label>
+                <input type="date" id="announcement-date" name="announcement-date">
+            </div>
+
+            <!-- Module Selection -->
+            <div class="form-section">
+                <label>Module:</label>
+                <input type="radio" id="oc" name="module" value="oc">
+                <label for="oc">OC</label>
+                <input type="radio" id="ocj" name="module" value="ocj">
+                <label for="ocj">OCJ</label>
+                <input type="radio" id="html-js" name="module" value="html-js">
+                <label for="html-js">HTML/JS</label>
+                <input type="radio" id="oaj" name="module" value="oaj">
+                <label for="oaj">OAJ</label>
+                <input type="radio" id="oracle" name="module" value="oracle">
+                <label for="oracle">Oracle</label>
+                <input type="radio" id="java" name="module" value="java">
+                <label for="java">Java</label>
+            </div>
+
+            <!-- Topics Section -->
+            <div class="form-section">
+                <label>Topics:</label>
+                <div class="topics">
+                    <input type="checkbox" id="topic1" name="topics" value="topic1">
+                    <label for="topic1">Topic 1</label>
+                    <input type="checkbox" id="topic2" name="topics" value="topic2">
+                    <label for="topic2">Topic 2</label>
+                    <input type="checkbox" id="topic3" name="topics" value="topic3">
+                    <label for="topic3">Topic 3</label>
+                    <input type="checkbox" id="topic4" name="topics" value="topic4">
+                    <label for="topic4">Topic 4</label>
+                    <input type="checkbox" id="topic5" name="topics" value="topic5">
+                    <label for="topic5">Topic 5</label>
+                    <input type="checkbox" id="topic6" name="topics" value="topic6">
+                    <label for="topic6">Topic 6</label>
+                </div>
+            </div>
+
+            <!-- Type of Assessment -->
+            <div class="form-section">
+                <label>Type of Assessment:</label>
+                <input type="radio" id="mcq" name="assessment" value="mcq">
+                <label for="mcq">MCQ</label>
+                <input type="radio" id="desc" name="assessment" value="desc">
+                <label for="desc">Descriptive Test</label>
+                <input type="radio" id="coding" name="assessment" value="coding">
+                <label for="coding">Coding Test</label>
+                <input type="radio" id="lab" name="assessment" value="lab">
+                <label for="lab">Lab Test</label>
+            </div>
+
+            <!-- Marks Configuration -->
+            <div class="form-section">
+                <label>Configure Marks:</label>
+                <div class="marks-input">
+                    <label for="topic2-marks">Topic 2:</label>
+                    <input type="number" id="topic2-marks" name="topic2-marks" placeholder="Enter Marks">
+                    <label for="topic6-marks">Topic 6:</label>
+                    <input type="number" id="topic6-marks" name="topic6-marks" placeholder="Enter Marks">
+                    <p>Total: 20</p>
+                </div>
+            </div>
+
+            <!-- Upload from Excel or Enter Marks -->
+            <div class="form-section">
+                <label>Upload Marks:</label>
+                <input type="radio" id="upload" name="marks-entry" value="upload">
+                <label for="upload">Upload from Excel</label>
+                <input type="radio" id="manual" name="marks-entry" value="manual">
+                <label for="manual">Enter Marks Manually</label>
+            </div>
+
+            <!-- Sample Excel Link -->
+            <div class="form-section">
+                <a href="#" download>Sample Excel</a>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-section">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
